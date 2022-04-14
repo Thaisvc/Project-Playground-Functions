@@ -89,57 +89,69 @@ function fizzBuzz(numArray) {
   }
   return resut;
 }
-//console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
 //----------------------------------------------------------------------------------------------------------
 // Desafio 9
 function encode(string) {
-  let nova = string.split("");
+  let nova = string.split('');
   let arryNovo = [];
   for (let index = 0; index < nova.length; index += 1) {
-    if (nova[index] === "a") {
+    if (nova[index] === 'a') {
       arryNovo.push(1);
-    } else if (nova[index] === "e") {
+    } else if (nova[index] === 'e') {
       arryNovo.push(2);
-    } else if (nova[index] === "i") {
+    } else if (nova[index] === 'i') {
       arryNovo.push(3);
-    } else if (nova[index] === "o") {
+    } else if (nova[index] === 'o') {
       arryNovo.push(4);
-    } else if (nova[index] === "u") {
+    } else if (nova[index] === 'u') {
       arryNovo.push(5);
     } else {
       arryNovo.push(nova[index]);
     }
   }
-  return arryNovo.join("");
+  return arryNovo.join('');
 }
 //console.log(encode("hi there!"));
 
 function decode(arryNovo) {
-  let nova2 = arryNovo.split("");
+  let nova2 = arryNovo.split('');
   let novoArray = [];
   for (let index = 0; index < nova2.length; index += 1) {
     if (nova2[index] == 1) {
-      novoArray.push("a");
+      novoArray.push('a');
     } else if (nova2[index] == 2) {
-      novoArray.push("e");
+      novoArray.push('e');
     } else if (nova2[index] == 3) {
-      novoArray.push("i");
+      novoArray.push('i');
     } else if (nova2[index] == 4) {
-      novoArray.push("o");
+      novoArray.push('o');
     } else if (nova2[index] == 5) {
-      novoArray.push("u");
+      novoArray.push('u');
     } else {
       novoArray.push(nova2[index]);
     }
   }
-  return novoArray.join("");
+  return novoArray.join('');
 }
 //console.log(decode("h3 th2r2!"));
 //----------------------------------------------------------------------------------------------------------
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(arrayList, nome) {
+  let listTech = {};
+  let list2 = [];
+  arrayList = arrayList.sort();
+  if (arrayList == '') {
+    return 'Vazio!';
+  } else {
+    for (let i = 0; i < arrayList.length; i++) {
+      listTech[+[i]] = { tech: arrayList[i], name: nome };
+      list2.push(listTech[i]);
+    }
+    return list2;
+  }
 }
+//console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "lucas"));
 
 module.exports = {
   calcArea,

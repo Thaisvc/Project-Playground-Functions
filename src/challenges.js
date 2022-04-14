@@ -75,8 +75,27 @@ return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayNumeros) {
+  
+  let divide3 = '';
+  let divide5 = '';
+  let divide3E5 = '';
+  let bag = '';
+  for (let index = 0; index < arrayNumeros.length; index += 1) {
+      if (arrayNumeros[index] % 3 === 0) {
+          divide3 = ['fizz'];
+         console.log( divide3.join(' '));
+      }else if (arrayNumeros[index] % 5 === 0){
+          divide5 = ['buzz'];
+          console.log(divide5.join(' ') ); 
+      }else if (arrayNumeros[index] % 3 && arrayNumeros[index] % 5 === 0){
+          divide3E5 = ['fizzBuzz!'];
+          console.log(divide3E5.join(' ')); 
+      }else {
+          bug = ['bag'];
+          console.log(bug.join('')); 
+      }
+    }
 }
 
 // Desafio 9
